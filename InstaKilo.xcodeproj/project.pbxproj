@@ -7,25 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1FDFCC1E39615300DA6CF1 /* LocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1FDFCB1E39615300DA6CF1 /* LocationObject.m */; };
+		3C1FDFCF1E39615D00DA6CF1 /* CategoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1FDFCE1E39615D00DA6CF1 /* CategoryObject.m */; };
 		3C98FB421E39207C00C27788 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FB411E39207C00C27788 /* main.m */; };
 		3C98FB451E39207C00C27788 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FB441E39207C00C27788 /* AppDelegate.m */; };
-		3C98FB481E39207C00C27788 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FB471E39207C00C27788 /* ViewController.m */; };
 		3C98FB4B1E39207D00C27788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C98FB491E39207D00C27788 /* Main.storyboard */; };
 		3C98FB4D1E39207D00C27788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C98FB4C1E39207D00C27788 /* Assets.xcassets */; };
 		3C98FB501E39207D00C27788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C98FB4E1E39207D00C27788 /* LaunchScreen.storyboard */; };
+		3C98FB591E3922AE00C27788 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FB581E3922AE00C27788 /* CollectionViewCell.m */; };
+		3C98FB5C1E3922F100C27788 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FB5B1E3922F100C27788 /* CollectionViewController.m */; };
+		3C98FB5F1E39285100C27788 /* PhotoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FB5E1E39285100C27788 /* PhotoObject.m */; };
+		3C98FB621E39292800C27788 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FB611E39292800C27788 /* Manager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C1FDFCA1E39615300DA6CF1 /* LocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationObject.h; sourceTree = "<group>"; };
+		3C1FDFCB1E39615300DA6CF1 /* LocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationObject.m; sourceTree = "<group>"; };
+		3C1FDFCD1E39615D00DA6CF1 /* CategoryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryObject.h; path = Assets.xcassets/CategoryObject.h; sourceTree = "<group>"; };
+		3C1FDFCE1E39615D00DA6CF1 /* CategoryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryObject.m; path = Assets.xcassets/CategoryObject.m; sourceTree = "<group>"; };
 		3C98FB3D1E39207C00C27788 /* InstaKilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaKilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C98FB411E39207C00C27788 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C98FB431E39207C00C27788 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C98FB441E39207C00C27788 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3C98FB461E39207C00C27788 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3C98FB471E39207C00C27788 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3C98FB4A1E39207D00C27788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C98FB4C1E39207D00C27788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C98FB4F1E39207D00C27788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C98FB511E39207D00C27788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C98FB571E3922AE00C27788 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		3C98FB581E3922AE00C27788 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		3C98FB5A1E3922F100C27788 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		3C98FB5B1E3922F100C27788 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		3C98FB5D1E39285100C27788 /* PhotoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoObject.h; sourceTree = "<group>"; };
+		3C98FB5E1E39285100C27788 /* PhotoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoObject.m; sourceTree = "<group>"; };
+		3C98FB601E39292800C27788 /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		3C98FB611E39292800C27788 /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +73,19 @@
 		3C98FB3F1E39207C00C27788 /* InstaKilo */ = {
 			isa = PBXGroup;
 			children = (
-				3C98FB431E39207C00C27788 /* AppDelegate.h */,
-				3C98FB441E39207C00C27788 /* AppDelegate.m */,
-				3C98FB461E39207C00C27788 /* ViewController.h */,
-				3C98FB471E39207C00C27788 /* ViewController.m */,
 				3C98FB491E39207D00C27788 /* Main.storyboard */,
-				3C98FB4C1E39207D00C27788 /* Assets.xcassets */,
-				3C98FB4E1E39207D00C27788 /* LaunchScreen.storyboard */,
-				3C98FB511E39207D00C27788 /* Info.plist */,
+				3C98FB5A1E3922F100C27788 /* CollectionViewController.h */,
+				3C98FB5B1E3922F100C27788 /* CollectionViewController.m */,
+				3C98FB571E3922AE00C27788 /* CollectionViewCell.h */,
+				3C98FB581E3922AE00C27788 /* CollectionViewCell.m */,
+				3C98FB5D1E39285100C27788 /* PhotoObject.h */,
+				3C98FB5E1E39285100C27788 /* PhotoObject.m */,
+				3C98FB601E39292800C27788 /* Manager.h */,
+				3C98FB611E39292800C27788 /* Manager.m */,
+				3C1FDFCA1E39615300DA6CF1 /* LocationObject.h */,
+				3C1FDFCB1E39615300DA6CF1 /* LocationObject.m */,
+				3C1FDFCD1E39615D00DA6CF1 /* CategoryObject.h */,
+				3C1FDFCE1E39615D00DA6CF1 /* CategoryObject.m */,
 				3C98FB401E39207C00C27788 /* Supporting Files */,
 			);
 			path = InstaKilo;
@@ -74,7 +94,12 @@
 		3C98FB401E39207C00C27788 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3C98FB4C1E39207D00C27788 /* Assets.xcassets */,
+				3C98FB511E39207D00C27788 /* Info.plist */,
+				3C98FB431E39207C00C27788 /* AppDelegate.h */,
+				3C98FB441E39207C00C27788 /* AppDelegate.m */,
 				3C98FB411E39207C00C27788 /* main.m */,
+				3C98FB4E1E39207D00C27788 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,8 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C98FB481E39207C00C27788 /* ViewController.m in Sources */,
+				3C1FDFCF1E39615D00DA6CF1 /* CategoryObject.m in Sources */,
+				3C1FDFCC1E39615300DA6CF1 /* LocationObject.m in Sources */,
+				3C98FB5F1E39285100C27788 /* PhotoObject.m in Sources */,
+				3C98FB5C1E3922F100C27788 /* CollectionViewController.m in Sources */,
+				3C98FB591E3922AE00C27788 /* CollectionViewCell.m in Sources */,
 				3C98FB451E39207C00C27788 /* AppDelegate.m in Sources */,
+				3C98FB621E39292800C27788 /* Manager.m in Sources */,
 				3C98FB421E39207C00C27788 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +337,7 @@
 				3C98FB561E39207D00C27788 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
