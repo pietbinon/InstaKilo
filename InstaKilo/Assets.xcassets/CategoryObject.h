@@ -11,7 +11,8 @@
 
 @interface CategoryObject : NSObject
 
-@property (strong, nonatomic) NSString *categoryTitle;
-@property (strong, nonatomic) NSArray <PhotoObject *> *photosCategoryArray;
+@property (strong, nonatomic) NSMutableDictionary <NSString *, NSArray <PhotoObject *>*> *categoryDict;
+
+- (instancetype)initCategoryWithDictionary: (NSMutableDictionary *) categoryDict;
 
 @end

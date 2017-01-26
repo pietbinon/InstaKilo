@@ -6,18 +6,17 @@
 //  Copyright © 2017 Jonescr. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 @class PhotoObject;
 
 @interface Manager : NSObject
 
 @property (strong, nonatomic) NSMutableArray <PhotoObject *> *photoObjects;
-@property (strong, nonatomic) NSMutableDictionary <NSString *, PhotoObject *> *sortDict;
 
 -(void)setUpArrays;
--(NSInteger)numberOfSections;
--(NSInteger)numberOfItemsInSection:(NSInteger)section;
--(PhotoObject *)objectInPhotoObjectsAtIndex:(NSIndexPath *)indexPath;
--(void)setDisplayObjectType: (NSUInteger)segmentIndex;
+-(void)toggleSegmentControl: (UISegmentedControl *)sender;
+-(NSInteger)numberOfSectionsInCollectionView;
+-(NSInteger)numberOfItemsInSection;
+
 
 @end

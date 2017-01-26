@@ -11,12 +11,11 @@
 
 @implementation CategoryObject
 
-- (instancetype)initCategoryWithTitle: (NSString *)title photoObjectsArray: (NSArray<PhotoObject *> *)photoObjects
+- (instancetype)initCategoryWithDictionary: (NSMutableDictionary *) categoryDict
 {
     self = [super init];
     if (self) {
-        _categoryTitle = title;
-        _photosCategoryArray = photoObjects;
+        _categoryDict = categoryDict;
     }
     return self;
 }

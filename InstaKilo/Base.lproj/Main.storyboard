@@ -85,14 +85,14 @@
                     <navigationItem key="navigationItem" id="ZSJ-LJ-D7g">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="tXd-10-uyI">
-                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Category"/>
                                 <segment title="Location"/>
                             </segments>
                             <connections>
-                                <action selector="sectionControl:" destination="y5s-HM-tiK" eventType="valueChanged" id="3oE-9G-Ckw"/>
+                                <action selector="sectionControl:" destination="y5s-HM-tiK" eventType="valueChanged" id="PeW-Aw-Y4J"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>

@@ -11,9 +11,8 @@
 
 @interface LocationObject : NSObject
 
-@property (strong, nonatomic) NSString *locationTitle;
-@property (strong, nonatomic) NSArray <PhotoObject *> *photosLocationArray;
+@property (strong, nonatomic) NSMutableDictionary <NSString *, NSArray <PhotoObject *>*> *locationDict;
 
-- (instancetype)initLocationWithTitle: (NSString *)title photoObjectsArray: (NSArray<PhotoObject *> *)photoObjects;
+- (instancetype)initLocationWithDictionary: (NSMutableDictionary *) locationDict;
 
 @end

@@ -11,12 +11,11 @@
 
 @implementation LocationObject
 
-- (instancetype)initLocationWithTitle: (NSString *)title photoObjectsArray: (NSArray<PhotoObject *> *)photoObjects
+- (instancetype)initLocationWithDictionary: (NSMutableDictionary *) locationDict
 {
     self = [super init];
     if (self) {
-        _locationTitle = title ;
-        _photosLocationArray = photoObjects;
+        _locationDict = locationDict;
     }
     return self;
 }
