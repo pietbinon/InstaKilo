@@ -22,8 +22,8 @@
 @property (assign, nonatomic) NSInteger state;
 
 - (void)setUpArrays;
-- (void)toggleSegmentControl: (UISegmentedControl *)sender;
-- (NSInteger)numberOfItemsInSection;
-- (NSInteger)numberOfSectionsInCollectionView;
+//- (void)toggleSegmentControl: (UISegmentedControl *)sender;
+//- (NSInteger)numberOfItemsInSection;
+//- (NSInteger)numberOfSectionsInCollectionView;
 
 @end

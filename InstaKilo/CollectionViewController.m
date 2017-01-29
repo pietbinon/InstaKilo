@@ -16,8 +16,6 @@
 @property (strong, nonatomic) Manager *manager;
 @property (strong, nonatomic) NSMutableArray <NSArray *> *catSections;
 @property (strong, nonatomic) NSMutableArray <NSArray *> *locSections;
-@property (strong, nonatomic) NSArray *catDictKeys;
-@property (strong, nonatomic) NSArray *locDictKeys;
 
 @end
 
@@ -28,8 +26,6 @@
     self.manager = [Manager new];
 
     [self.manager setUpArrays];
-    self.catDictKeys = [NSArray new];
-    self.locDictKeys = [NSArray new];
     self.manager.state = 0;
 }
 
@@ -40,13 +36,13 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     if (self.manager.state == 0) {
-        self.catDictKeys = [self.manager.category.categoryDict allKeys];
-        self.catSections = [[NSMutableArray alloc]initWithArray:self.catDictKeys];
+        NSArray *catDictKeys = [self.manager.category.categoryDict allKeys];
+        self.catSections = [[NSMutableArray alloc]initWithArray:catDictKeys];
     return self.catSections.count;
     }
     else {
-        self.locDictKeys = [self.manager.location.locationDict allKeys];
-        self.locSections = [[NSMutableArray alloc]initWithArray:self.locDictKeys];
+        NSArray *locDictKeys = [self.manager.location.locationDict allKeys];
+        self.locSections = [[NSMutableArray alloc]initWithArray:locDictKeys];
         return self.locSections.count;
     }
 }
@@ -75,37 +71,6 @@
         [cell displayCell:photo];
     }
     
-    
-    
-//    if (self.manager.state == 0) {
-//        
-//        self.catSections = [NSMutableArray new];
-//        self.tempCatArray = [NSArray new];
-//        
-//        NSArray *sections = [self.manager.category.categoryDict allKeys];
-//        for (NSString *rows in sections) {
-//            
-//            self.tempCatArray = [self.manager.category.categoryDict valueForKey:rows];
-//            [self.catSections addObject:self.tempCatArray[indexPath.section]];
-//        }
-//        
-//        PhotoObject *photoObject = self.catSections[indexPath.item];
-//        [cell displayCell:photoObject];
-//    }
-//    if (self.manager.state == 1) {
-//        
-//        self.locSections = [NSMutableArray new];
-//        self.tempCatArray = [NSArray new];
-//        
-//        NSArray *sections = [self.manager.location.locationDict allKeys];
-//        for (NSString *rows in sections) {
-//            self.tempLocArray = [self.manager.location.locationDict valueForKey:rows];
-//        }
-//        [self.locSections addObject:self.tempLocArray[indexPath.section]];
-//        PhotoObject *photoObject = self.locSections[indexPath.item];
-//        [cell displayCell:photoObject];
-//    }
-    
     return cell;
 }
 
@@ -125,7 +90,12 @@
 }
 
 - (IBAction)sectionControl:(UISegmentedControl *)sender {
-    [self.manager toggleSegmentControl:sender];
+    if (sender.selectedSegmentIndex == 0) {
+        self.manager.state = 0;
+    } else {
+        self.manager.state = 1;
+    }
+    [self.collectionView reloadData];
 }
 
 @end

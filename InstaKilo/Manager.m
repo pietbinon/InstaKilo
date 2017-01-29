@@ -87,52 +87,52 @@
     }
 }
 
--(void)toggleSegmentControl: (UISegmentedControl *)sender {
-    if (sender.selectedSegmentIndex == 0) {
-        
-        [self numberOfCategories];
-        [self numberOfItemsInCategory];
-        self.state = 0;
-        
-    } else {
-        [self numberOfLocations];
-        [self numberOfItemsInLocation];
-        self.state = 1;
+//-(void)toggleSegmentControl: (UISegmentedControl *)sender {
+//    if (sender.selectedSegmentIndex == 0) {
 
-            }
-}
-
--(NSInteger)numberOfSectionsInCollectionView {
-    if (self.state == 0) {
-        return [self numberOfCategories];
-    }
-return [self numberOfLocations];
-}
-
-
-- (NSInteger)numberOfItemsInSection {
-    if (self.state == 0) {
-        return [self numberOfItemsInCategory];
-    }
-    return [self numberOfItemsInLocation];
-}
-
-
--(NSInteger)numberOfLocations {
-    return self.location.locationDict.allKeys.count;
-}
-
--(NSInteger)numberOfCategories {
-    return self.category.categoryDict.allKeys.count;
-}
-
--(NSInteger)numberOfItemsInLocation {
-    return [self.location.locationDict objectForKey:self.locKey].count;
-}
-
--(NSInteger)numberOfItemsInCategory {
-    return [self.category.categoryDict objectForKey:self.catKey].count;
-}
+//        [self numberOfCategories];
+//        [self numberOfItemsInCategory];
+//        self.state = 0;
+//        
+//    } else {
+//        [self numberOfLocations];
+//        [self numberOfItemsInLocation];
+//        self.state = 1;
+//
+//            }
+//}
+//
+//-(NSInteger)numberOfSectionsInCollectionView {
+//    if (self.state == 0) {
+//        return [self numberOfCategories];
+//    }
+//return [self numberOfLocations];
+//}
+//
+//
+//- (NSInteger)numberOfItemsInSection {
+//    if (self.state == 0) {
+//        return [self numberOfItemsInCategory];
+//    }
+//    return [self numberOfItemsInLocation];
+//}
+//
+//
+//-(NSInteger)numberOfLocations {
+//    return self.location.locationDict.allKeys.count;
+//}
+//
+//-(NSInteger)numberOfCategories {
+//    return self.category.categoryDict.allKeys.count;
+//}
+//
+//-(NSInteger)numberOfItemsInLocation {
+//    return [self.location.locationDict objectForKey:self.locKey].count;
+//}
+//
+//-(NSInteger)numberOfItemsInCategory {
+//    return [self.category.categoryDict objectForKey:self.catKey].count;
+//}
 
 
 @end
