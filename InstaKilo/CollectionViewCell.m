@@ -11,14 +11,14 @@
 
 @interface CollectionViewCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *photoView;
 
 @end
 
 @implementation CollectionViewCell
 
--(void)setPhotoObject:(PhotoObject *)photoObject{
-    self.imageView.image = photoObject.image;
+-(void)displayCell: (PhotoObject *) photoObject {
+    self.photoView.image = photoObject.image;
 }
 
 

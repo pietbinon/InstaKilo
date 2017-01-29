@@ -11,6 +11,6 @@
 
 @interface CollectionViewCell : UICollectionViewCell
 
-@property (strong, nonatomic) PhotoObject *photoObject;
+-(void)displayCell:(PhotoObject *) photoObject;
 
 @end

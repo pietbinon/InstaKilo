@@ -13,6 +13,4 @@
 
 @property (strong, nonatomic) NSMutableDictionary <NSString *, NSArray <PhotoObject *>*> *locationDict;
 
-- (instancetype)initLocationWithDictionary: (NSMutableDictionary *) locationDict;
-
 @end

@@ -13,6 +13,4 @@
 
 @property (strong, nonatomic) NSMutableDictionary <NSString *, NSArray <PhotoObject *>*> *categoryDict;
 
-- (instancetype)initCategoryWithDictionary: (NSMutableDictionary *) categoryDict;
-
 @end

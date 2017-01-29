@@ -11,11 +11,11 @@
 
 @implementation LocationObject
 
-- (instancetype)initLocationWithDictionary: (NSMutableDictionary *) locationDict
+- (instancetype)init
 {
     self = [super init];
     if (self) {
-        _locationDict = locationDict;
+        _locationDict = [NSMutableDictionary new];
     }
     return self;
 }

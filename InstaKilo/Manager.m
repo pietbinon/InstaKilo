@@ -13,14 +13,22 @@
 
 @interface Manager ()
 
-@property (strong, nonatomic) LocationObject *location;
-@property (strong, nonatomic) CategoryObject *category;
-@property (assign, nonatomic) NSInteger sectionCount;
-@property (assign, nonatomic) NSInteger itemCount;
+@property (strong, nonatomic) NSString *catKey;
+@property (strong, nonatomic) NSString *locKey;
 
 @end
 
 @implementation Manager
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _location = [LocationObject new];
+        _category = [CategoryObject new];
+    }
+    return self;
+}
 
 -(void)setUpArrays {
     PhotoObject *photo1 = [[PhotoObject alloc]initWithImage:[UIImage imageNamed:@"Bruges"]
@@ -56,52 +64,74 @@
     
     NSArray *tempArray = @[photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10];
     self.photoObjects = [[NSMutableArray alloc]initWithArray:tempArray];
-
-    NSMutableArray *tempLocArray = [NSMutableArray new];
-    NSMutableArray *tempCatArray = [NSMutableArray new];
     
     for (PhotoObject *obj in self.photoObjects) {
-        NSString *locKey = obj.location;
-        if (!self.location.locationDict[locKey]) {
-            [tempLocArray addObject:obj];
+        self.locKey = obj.location;
+        if (!self.location.locationDict[self.locKey]) {
+            [self.location.locationDict setObject:[NSMutableArray new] forKey:self.locKey];
         }
-        NSDictionary *tempLocDict = @{locKey: @[tempLocArray]};
-        self.location.locationDict = [[NSMutableDictionary alloc]initWithDictionary:tempLocDict];
+        NSMutableArray *tempArray = [[NSMutableArray alloc]initWithArray:[self.location.locationDict valueForKey:self.locKey]];
+        [tempArray addObject:obj];
+        [self.location.locationDict setObject:tempArray forKey:self.locKey];
     }
     
     for (PhotoObject *obj in self.photoObjects) {
-        NSString *catKey = obj.category;
-        if (!self.category.categoryDict[catKey]) {
-            [tempCatArray addObject:obj];
+        self.catKey = obj.category;
+        if (!self.category.categoryDict[self.catKey]) {
+            [self.category.categoryDict setObject:[NSMutableArray new] forKey:self.catKey];
+            
         }
-        NSDictionary *tempCatDict = @{catKey: @[tempCatArray]};
-        self.category.categoryDict = [[NSMutableDictionary alloc]initWithDictionary:tempCatDict];
+        NSMutableArray *tempArray = [[NSMutableArray alloc]initWithArray:[self.category.categoryDict valueForKey:self.catKey]];
+        [tempArray addObject:obj];
+        [self.category.categoryDict setObject:tempArray forKey:self.catKey];
     }
 }
 
 -(void)toggleSegmentControl: (UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {
-        self.sectionCount = self.category.categoryDict.allKeys.count;
         
-        NSArray *categoryArray = [self.category.categoryDict allValues];
-        NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:categoryArray];
-        self.itemCount = orderedSet.count;
+        [self numberOfCategories];
+        [self numberOfItemsInCategory];
+        self.state = 0;
         
     } else {
-        self.sectionCount= self.location.locationDict.allKeys.count;
-        
-        NSArray *locationArray = [self.location.locationDict allValues];
-        NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:locationArray];
-        self.itemCount = orderedSet.count;
-    }
+        [self numberOfLocations];
+        [self numberOfItemsInLocation];
+        self.state = 1;
+
+            }
 }
 
 -(NSInteger)numberOfSectionsInCollectionView {
-    return self.sectionCount;
+    if (self.state == 0) {
+        return [self numberOfCategories];
+    }
+return [self numberOfLocations];
 }
 
--(NSInteger)numberOfItemsInSection {
-    return self.itemCount;
+
+- (NSInteger)numberOfItemsInSection {
+    if (self.state == 0) {
+        return [self numberOfItemsInCategory];
+    }
+    return [self numberOfItemsInLocation];
+}
+
+
+-(NSInteger)numberOfLocations {
+    return self.location.locationDict.allKeys.count;
+}
+
+-(NSInteger)numberOfCategories {
+    return self.category.categoryDict.allKeys.count;
+}
+
+-(NSInteger)numberOfItemsInLocation {
+    return [self.location.locationDict objectForKey:self.locKey].count;
+}
+
+-(NSInteger)numberOfItemsInCategory {
+    return [self.category.categoryDict objectForKey:self.catKey].count;
 }
 
 

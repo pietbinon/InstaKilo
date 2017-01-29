@@ -43,11 +43,11 @@
                                     <constraint firstAttribute="trailing" secondItem="4sS-il-OSu" secondAttribute="trailing" id="qHW-kr-gfl"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="imageView" destination="4sS-il-OSu" id="Dur-qY-KRT"/>
+                                    <outlet property="photoView" destination="4sS-il-OSu" id="HVm-IG-MDu"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="NkT-wi-S1Y">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="NkT-wi-S1Y" customClass="HeaderCollectionReusableView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -76,10 +76,13 @@
                                 <constraint firstAttribute="trailing" secondItem="4lG-NL-F59" secondAttribute="trailing" id="mHL-TP-2PG"/>
                                 <constraint firstItem="4lG-NL-F59" firstAttribute="leading" secondItem="NkT-wi-S1Y" secondAttribute="leading" id="tvm-Q4-cnS"/>
                             </constraints>
+                            <connections>
+                                <outlet property="headerLabel" destination="gib-N1-NiQ" id="Zzz-TK-fWi"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
-                            <outlet property="dataSource" destination="y5s-HM-tiK" id="2Ts-6V-NDk"/>
-                            <outlet property="delegate" destination="y5s-HM-tiK" id="JMC-I7-gZ0"/>
+                            <outlet property="dataSource" destination="y5s-HM-tiK" id="y9C-kT-RWR"/>
+                            <outlet property="delegate" destination="y5s-HM-tiK" id="EZ6-uE-qxF"/>
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="ZSJ-LJ-D7g">
@@ -92,13 +95,10 @@
                                 <segment title="Location"/>
                             </segments>
                             <connections>
-                                <action selector="sectionControl:" destination="y5s-HM-tiK" eventType="valueChanged" id="PeW-Aw-Y4J"/>
+                                <action selector="sectionControl:" destination="y5s-HM-tiK" eventType="valueChanged" id="4ys-Kz-joV"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>
-                    <connections>
-                        <outlet property="sectionLabel" destination="Pfo-e1-tec" id="RK1-7c-5Hi"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLZ-p2-X91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,11 +11,11 @@
 
 @implementation CategoryObject
 
-- (instancetype)initCategoryWithDictionary: (NSMutableDictionary *) categoryDict
+- (instancetype)init
 {
     self = [super init];
     if (self) {
-        _categoryDict = categoryDict;
+        _categoryDict = [NSMutableDictionary new];
     }
     return self;
 }
