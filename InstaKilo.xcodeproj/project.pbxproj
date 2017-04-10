@@ -76,21 +76,9 @@
 		3C98FB3F1E39207C00C27788 /* InstaKilo */ = {
 			isa = PBXGroup;
 			children = (
-				3C98FB491E39207D00C27788 /* Main.storyboard */,
-				3C0B3A431E3BD756001146B3 /* HeaderCollectionReusableView.h */,
-				3C0B3A441E3BD756001146B3 /* HeaderCollectionReusableView.m */,
-				3C98FB5A1E3922F100C27788 /* CollectionViewController.h */,
-				3C98FB5B1E3922F100C27788 /* CollectionViewController.m */,
-				3C98FB571E3922AE00C27788 /* CollectionViewCell.h */,
-				3C98FB581E3922AE00C27788 /* CollectionViewCell.m */,
-				3C98FB5D1E39285100C27788 /* PhotoObject.h */,
-				3C98FB5E1E39285100C27788 /* PhotoObject.m */,
-				3C98FB601E39292800C27788 /* Manager.h */,
-				3C98FB611E39292800C27788 /* Manager.m */,
-				3C1FDFCA1E39615300DA6CF1 /* LocationObject.h */,
-				3C1FDFCB1E39615300DA6CF1 /* LocationObject.m */,
-				3C1FDFCD1E39615D00DA6CF1 /* CategoryObject.h */,
-				3C1FDFCE1E39615D00DA6CF1 /* CategoryObject.m */,
+				7748FF151E9C275000B06366 /* Model */,
+				7748FF161E9C277100B06366 /* View */,
+				7748FF171E9C27C500B06366 /* Controller */,
 				3C98FB401E39207C00C27788 /* Supporting Files */,
 			);
 			path = InstaKilo;
@@ -107,6 +95,42 @@
 				3C98FB4E1E39207D00C27788 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7748FF151E9C275000B06366 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C98FB601E39292800C27788 /* Manager.h */,
+				3C98FB611E39292800C27788 /* Manager.m */,
+				3C98FB5D1E39285100C27788 /* PhotoObject.h */,
+				3C98FB5E1E39285100C27788 /* PhotoObject.m */,
+				3C1FDFCA1E39615300DA6CF1 /* LocationObject.h */,
+				3C1FDFCB1E39615300DA6CF1 /* LocationObject.m */,
+				3C1FDFCD1E39615D00DA6CF1 /* CategoryObject.h */,
+				3C1FDFCE1E39615D00DA6CF1 /* CategoryObject.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7748FF161E9C277100B06366 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C98FB491E39207D00C27788 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7748FF171E9C27C500B06366 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C98FB5A1E3922F100C27788 /* CollectionViewController.h */,
+				3C98FB5B1E3922F100C27788 /* CollectionViewController.m */,
+				3C98FB571E3922AE00C27788 /* CollectionViewCell.h */,
+				3C98FB581E3922AE00C27788 /* CollectionViewCell.m */,
+				3C0B3A431E3BD756001146B3 /* HeaderCollectionReusableView.h */,
+				3C0B3A441E3BD756001146B3 /* HeaderCollectionReusableView.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

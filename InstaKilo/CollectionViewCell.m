@@ -2,12 +2,14 @@
 //  CollectionViewCell.m
 //  InstaKilo
 //
-//  Created by Chris Jones on 2017-01-25.
-//  Copyright © 2017 Jonescr. All rights reserved.
+//  Created by Pierre Binon on 2017-03-17.
+//  Copyright © 2017 Pierre Binon. All rights reserved.
 //
 
 #import "CollectionViewCell.h"
 #import "PhotoObject.h"
+
+
 
 @interface CollectionViewCell ()
 
@@ -15,11 +17,13 @@
 
 @end
 
+
+
 @implementation CollectionViewCell
 
 -(void)displayCell: (PhotoObject *) photoObject {
+    
     self.photoView.image = photoObject.image;
 }
-
 
 @end
